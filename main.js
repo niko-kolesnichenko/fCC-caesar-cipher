@@ -15,11 +15,14 @@ rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.") should decode to the strin
 */
 
 // Final solution
-/*function rot13(str) {
-    return str;
-  }
+function rot13(str) {
+  const originalAlphabetDict = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const cipherDict = "NOPQRSTUVWXYZABCDEFGHIJKLM";
   
-  rot13("SERR PBQR PNZC");*/
+  return str.replace(/[A-Z]/gi, letter => cipherDict[originalAlphabetDict.indexOf(letter)]);;
+}
+  
+console.log(rot13("SERR PBQR PNZC"));
 
 // Thinking history
 
